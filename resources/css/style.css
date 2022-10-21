@@ -4,7 +4,16 @@ font-family: 'Roboto Mono', monospace;
 font-family: 'Roboto Slab', serif;
 */
 
+:root {
+    --background-color: #DEDBD2;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    background-color: var(--background-color);
     font-family: 'Roboto Slab', serif;
 }
 
@@ -17,6 +26,11 @@ h1 {
 strong {
     font-weight: bold;
     color: darkred;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
 }
 
 h2 {
@@ -45,15 +59,37 @@ header li {
 header a {
     display: block;
     padding: 1rem 2rem;
-    color: #000000;
-    text-decoration: none;
 }
 
 /* Intro Section */
 
 #intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background-color: lightgray;
     height: 50rem;
+}
+
+#intro a {
+    position: relative;
+    padding: 1.5rem;
+    margin: 0 auto;
+    border: 2px solid darkred;
+}
+
+#intro a::after {
+    content: "";
+    position: absolute;
+    border-bottom: .125rem solid black;
+    width: 0;
+    bottom: 1.3rem;
+    left: 1.5rem;
+    transition: .25s ease-in-out;
+}
+
+#intro a:hover::after {
+    width: 4.57rem;
 }
 
 /* About Section */
