@@ -16,10 +16,11 @@
     <body>
         <header>
             <div class="nav-container">
+                <h3><span>&#60;Shay Ellis&#47;&#62;</span></h3>
                 <nav>
                     <ul>
                         <li><a href="#intro">Home</a></li>
-                        <li><a href="#about">About</a></li>
+                        <li><a href="#about-link">About</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#experience">Experience</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -34,33 +35,60 @@
                     <h1 class="intro-h1-two">I'm a full-stack web developer</h1>
                 </div>
                 <div class="intro-button">
-                    <a href="#about">About me</a>
+                    <a href="#about-link">About me</a>
                 </div>
             </section>
-            <section id="about">
-                <h2>About</h2>
-                <div class="about-container">
-                    <p>My name is Shay Ellis. I am a web developer based in central Oregon. I am currently enrolled in a the Full-Stack Engineering cores at codecademy and spend my free time learning as much as I can about code.</p>    
-                    <div class="picture-container">
-                        <img src="./resources/images/my-picture.jpg" alt="Professional portrait of Shay Ellis" class="my-picture">
+            <div class="adjustment">
+                <section id="about">
+                    <div id="about-link"></div>
+                    <h2>About</h2>
+                    <div class="about-container">
+                        <p>My name is Shay Ellis. I am a web developer based in central Oregon. I am currently enrolled in a the Full-Stack Engineering course at codecademy.</p>    
+                        <div class="picture-container">
+                            <img src="./resources/images/my-picture.jpg" alt="Professional portrait of Shay Ellis" class="my-picture">
+                        </div>
                     </div>
-                </div>
-            </section>
-            <section id="projects">
-                <h2>Projects</h2>
-            </section>
-            <section id="experience">
-                <h2>Experience</h2>
-            </section>
-            <section id="resume"> <!--Include in experience section?-->
-
-            </section>
-            <section id="contact">
-                <h2>Contact</h2>
-            </section>
+                </section>
+                <section id="projects">
+                    <h2>Projects</h2>
+                    <div class="projects-container">
+                        <div class="project"></div>
+                        <div class="project"></div>
+                        <div class="project"></div>
+                        <div class="project"></div>
+                    </div>
+                </section>
+                <section id="experience">
+                    <h2>Experience</h2>
+                </section>
+                <section id="resume"> <!--Include in experience section?-->
+                </section>
+                <section id="contact">
+                    <div class="form-container">
+                        <form action="#" method="POST" class="contact-form">
+                            <h2>Contact</h2>
+                            <div class="input-container">
+                                <input type="text" name="name" id="name" placeholder=" " required>
+                                <label for="name">Name</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="text" name="email" id="email" placeholder=" " required>
+                                <label for="email">Email</label>
+                            </div>
+                            <button type="submit" class="button">Submit</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
         </main>
-        <footer>
-            <p>&#169; Shay Ellis</p>
-        </footer>
+        <div class="adjustment">
+            <footer>
+                <h3>&#169; Shay Ellis - 2022</h3>
+                <div class="social-link-container">
+                    <a href="https://github.com/ShayEllis" target="_blank"><img src="./resources/images/github-logo.png"></a>
+                    <a href="https://www.linkedin.com/in/shayellis815/" target="_blank"><img src="./resources/images/linkedin-logo.png"></a>
+                </div>
+            </footer>
+        </div>
     </body>
 </html>
