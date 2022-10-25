@@ -12,6 +12,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+        <script src="./resources/script/script.js" defer></script>
     </head>
     <body>
         <header>
@@ -19,8 +20,8 @@
                 <h3><span>&#60;Shay Ellis&#47;&#62;</span></h3>
                 <nav>
                     <ul>
-                        <li><a href="#intro">Home</a></li>
-                        <li><a href="#about-link">About</a></li>
+                        <li><a href="#intro" id="start-js-reset">Home</a></li>
+                        <li><a href="#about-link" id="introAnimationReset">About</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#experience">Experience</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -31,11 +32,11 @@
         <main>
             <section id="intro">
                 <div class="intro-container">
-                    <h1>Hi! My name is <strong>Shay Ellis</strong></h1>
-                    <h1 class="intro-h1-two">I'm a full-stack web developer</h1>
+                    <h1 class="js-animation-reset">Hi! My name is <strong>Shay Ellis</strong></h1>
+                    <h1 class="intro-h1-two js-animation-reset">I'm a full-stack web developer</h1>
                 </div>
                 <div class="intro-button">
-                    <a href="#about-link">About me</a>
+                    <a href="#about-link" class="js-animation-reset">About me</a>
                 </div>
             </section>
             <div class="adjustment">
