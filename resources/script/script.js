@@ -1,3 +1,5 @@
+//Reset intro animations when at the top of the page
+
 let introElements = document.getElementsByClassName("js-animation-reset");
 let navHome = document.getElementById("start-js-reset");
 
@@ -13,3 +15,11 @@ let resetAnimation = () => {
 };
 
 window.addEventListener("scroll", resetAnimation);
+
+//Form label movement
+
+let inputContainers = document.getElementsByClassName("input-container");
+
+inputContainers[0].firstElementChild.style.backgroundColor = "green";
+
+//event.target.style.top = "4.8rem";

@@ -63,12 +63,12 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+a:hover, button:hover {
     color: var(--background-color);
     background-color: var(--button-hover);
 }
 
-a::before, a::after {
+a::before, button::before, a::after, button::after {
     content: "";
     position: absolute;
     height: 0;
@@ -76,28 +76,28 @@ a::before, a::after {
     transition: .4s ease-in-out;
 }
 
-a::before {
+a::before, button::before {
     border-top: 0 solid var(--strong-color);
     border-right: 0 solid var(--strong-color);
     bottom: 0;
     left: 0;
 }
 
-a:hover::before {
+a:hover::before, button:hover::before {
     border-top: .3rem solid var(--strong-color);
     border-right: .3rem solid var(--strong-color);
     width: calc(100% - .3rem);
     height: calc(100% - .3rem);
 }
 
-a::after {
+a::after, button::after {
     border-bottom: 0 solid var(--strong-color);
     border-left: 0 solid var(--strong-color);
     top: 0;
     right: 0;
 }
 
-a:hover::after {
+a:hover::after, button:hover::after {
     border-bottom: .3rem solid var(--strong-color);
     border-left: .3rem solid var(--strong-color);
     width: calc(100% - .3rem);
@@ -271,46 +271,74 @@ header a {
 
 /* Contact Section */
 
-.form-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background-color: var(--navbar);
-        color: var(--light-text);
-        margin: 0 auto;
-        width: 35rem;
-        height: 30rem;
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--navbar);
+    color: var(--light-text);
+    margin: 4rem auto;
+    padding-top: 2rem;
+    width: 40rem;
+    box-shadow: 0 0 1em black;
+}
+
+.contact-form h2 {
+    color: var(--light-text);
+    padding: 0;
 }
 
 .input-container {
     position: relative;
+    width: 75%;
+}
+
+.input-container::before {
+    content: "";
+    position: absolute;
+    bottom: -.1rem;
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    transform: scaleX(0);
+    height: .3rem;
+    background-color: var(--strong-color);
+    transition: .4s ease;
+}
+
+.input-container:focus-within::before {
+    transform: scaleX(1);
 }
 
 .contact-form label{
     margin-left: .4rem;
     position: relative;
-    transition: all .4s ease;
-    bottom: 2.4rem;
+    transition: .4s ease;
+    top: 2.4rem;
 }
 
-.contact-form input:focus + label, .contact-form input:valid + label{
-    bottom: 4.8rem;
-}
-
-form h2 {
-    color: var(--light-text)
-}
-
-input {
+.contact-form input {
+    color: var(--light-text);
+    background-color: transparent;
     width: 100%;
-    color: var(--light-text)
+    border: none;
+    outline: none;
+    border-bottom: .1rem solid var(--background-color);
 }
+
+/* .contact-form input:focus + label{
+    bottom: 4.8rem;
+} */
 
 .button {
-    padding: .5rem 2rem;
-    border-radius: 0;
+    position: relative;
+    width: 75%;
+    padding: .5rem 0;
+    margin: 3.5rem 0;
+    border: none;
 }
+
 /* Footer */
 
 footer {
