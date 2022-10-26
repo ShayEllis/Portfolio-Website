@@ -294,6 +294,15 @@ header a {
     width: 75%;
 }
 
+.contact-form label{
+    display: inline-block;
+    margin-left: .2rem;
+    position: relative;
+    transition: .4s ease;
+    left: 0;
+    top: 2.8rem;
+}
+
 .input-container::before {
     content: "";
     position: absolute;
@@ -307,36 +316,34 @@ header a {
     transition: .4s ease;
 }
 
-.input-container:focus-within::before {
-    transform: scaleX(1);
-}
+/* .input-container:focus-within::before {
+    transform: scaleX(1); --> TRIGGER WITH JAVASCRIPT
+} */
 
-.contact-form label{
-    margin-left: .4rem;
-    position: relative;
-    transition: .4s ease;
-    top: 2.4rem;
-}
+/* .contact-form .active {
+    top: ".3rem";
+    color: "var(--strong-color)"; --> MOVE FROM JAVASCRIPT TO CSS - ADD AND REMOVE STYLE WITH JAVASCRIPT
+    transform: "scale(.85)";
+} */
 
 .contact-form input {
     color: var(--light-text);
     background-color: transparent;
+    font-size: 1.6rem;
+    line-height: 2;
     width: 100%;
     border: none;
     outline: none;
     border-bottom: .1rem solid var(--background-color);
 }
 
-/* .contact-form input:focus + label{
-    bottom: 4.8rem;
-} */
-
 .button {
     position: relative;
     width: 75%;
     padding: .5rem 0;
-    margin: 3.5rem 0;
+    margin: 4.5rem 0 3.5rem 0;
     border: none;
+    background-color: var(--background-color);
 }
 
 /* Footer */
