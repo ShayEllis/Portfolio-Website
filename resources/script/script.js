@@ -11,7 +11,7 @@ let resetAnimation = () => {
             el.style.animation = '';
             }, 10);
         };
-    }
+    };
 };
 
 window.addEventListener("scroll", resetAnimation);
@@ -19,27 +19,23 @@ window.addEventListener("scroll", resetAnimation);
 //Form label movement
 
 let inputContainers = document.getElementsByClassName("input-container");
+let formElement = document.getElementsByTagName("form");
 
 let moveLabel = (event) => {
-    event.target.labels[0].style.top = ".3rem";
-    event.target.labels[0].style.color = "var(--strong-color)";
-    event.target.labels[0].style.transform = "scale(.85)";
+    event.target.labels[0].classList.add("active-input");
+    event.target.parentElement.style.setProperty('--before-scale', "scaleX(1)");
 };
 
 let resetLabel = (event) => {
     if (event.target.value.length === 0) {
-        event.target.labels[0].style.top = "";
-        event.target.labels[0].style.color = "";
-        event.target.labels[0].style.transform = "";
+        event.target.parentElement.style.setProperty('--before-scale', "");
+        event.target.labels[0].classList.remove("active-input");
     };
 };
 
 for (let el of inputContainers) {
     el.lastElementChild.addEventListener("focus", moveLabel);
-    el.lastElementChild.addEventListener("input", resetLabel);
     el.lastElementChild.addEventListener("blur", resetLabel);
 };
-
-
 
 //
